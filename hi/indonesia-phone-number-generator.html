@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="hi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            Indonesia Phone Number Generator - Generate Authentic & Random
+            Indonesian Numbers
+        </title>
+        <meta
+            name="description"
+            content="Easily generate random Indonesian phone numbers for testing, verification, and other purposes. Authentic format with comprehensive coverage across Indonesia."
+        />
+        <link rel="stylesheet" href="../styles.css" />
+    </head>
+    <body>
+        <header>
+            <nav>
+                <h1 class="logo">
+                    <a href="index.html" title="Phone Number Generator"
+                        >Phone Number Generator</a
+                    >
+                </h1>
+
+                <div class="language-list">
+                    <a
+                        href="../indonesia-phone-number-generator.html"
+                        title="English"
+                        >English</a
+                    >
+                    <a
+                        class="curr"
+                        href="./hi/indonesia-phone-number-generator.html"
+                        title="हिन्दी"
+                        >हिन्दी</a
+                    >
+                    <a
+                        href="../tl/indonesia-phone-number-generator.html"
+                        title="Filipino"
+                        >Filipino</a
+                    >
+                </div>
+
+                <div class="country-list">
+                    <a href="index.html" title="Phone Number Generator">Home</a>
+                    <a
+                        href="china-phone-number-generator.html"
+                        title="China Phone Number Generator"
+                        >China</a
+                    >
+                    <a
+                        href="india-phone-number-generator.html"
+                        title="India Phone Number Generator"
+                        >India</a
+                    >
+                    <a
+                        href="us-phone-number-generator.html"
+                        title="US Phone Number Generator"
+                        >US</a
+                    >
+                    <a
+                        href="indonesia-phone-number-generator.html"
+                        title="Indonesia Phone Number Generator"
+                        class="curr"
+                        >Indonesia</a
+                    >
+                    <a
+                        href="brazil-phone-number-generator.html"
+                        title="Brazil Phone Number Generator"
+                        >Brazil</a
+                    >
+                    <a
+                        href="pakistan-phone-number-generator.html"
+                        title="Pakistan Phone Number Generator"
+                        >Pakistan</a
+                    >
+                    <a
+                        href="nigeria-phone-number-generator.html"
+                        title="Nigeria Phone Number Generator"
+                        >Nigeria</a
+                    >
+                    <a
+                        href="bangladesh-phone-number-generator.html"
+                        title="Bangladesh Phone Number Generator"
+                        >Bangladesh</a
+                    >
+                    <a
+                        href="russia-phone-number-generator.html"
+                        title="Russia Phone Number Generator"
+                        >Russia</a
+                    >
+                    <a
+                        href="japan-phone-number-generator.html"
+                        title="Japan Phone Number Generator"
+                        >Japan</a
+                    >
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <h1>
+                    <a href="./indonesia-phone-number-generator.html"
+                        >Indonesia Phone Number Generator</a
+                    >
+                </h1>
+                <p>
+                    Generate valid Indonesia phone numbers with our tool.
+                    Perfect for various applications and tests.
+                </p>
+            </section>
+
+            <section>
+                <h2>Generate Indonesia Phone Number</h2>
+                <p style="margin-top: 5px">
+                    Note: These numbers are randomly generated and may not be
+                    valid for actual use.
+                </p>
+                <button id="generateButton">Generate Phone Number</button>
+
+                <div
+                    id="phoneNumberDisplay"
+                    class="number-display"
+                    style="margin-top: 10px"
+                ></div>
+                <div id="errorDisplay" class="error-display"></div>
+            </section>
+
+            <section>
+                <h2>Indonesia Phone Number Format</h2>
+                <p>
+                    The standard format for Indonesian phone numbers is +62
+                    xxx-xxxx-xxxx, where '+62' is the country code, followed by
+                    a 3-digit area code and then an 8-digit user number.
+                </p>
+            </section>
+
+            <section>
+                <h2>Major Mobile Operators in Indonesia</h2>
+                <ul>
+                    <li>Indosat Ooredoo: Starting with 81, 83, 85, 87, 88</li>
+                    <li>Telkomsel: Starting with 81, 82, 85, 87, 89</li>
+                    <li>XL Axiata: Starting with 81, 82, 85, 87, 89</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            Copyright 2023 &copy;
+            <a href="./" style="color: #333">Phone Number Generator</a>. All
+            rights reserved.
+        </footer>
+    </body>
+
+    <script>
+        document
+            .getElementById("generateButton")
+            .addEventListener("click", function () {
+                try {
+                    const phoneNumber = generateIndonesiaPhoneNumber();
+                    document.getElementById("phoneNumberDisplay").innerHTML +=
+                        phoneNumber + "<br />";
+                    document.getElementById("errorDisplay").innerHTML = "";
+                } catch (error) {
+                    document.getElementById("errorDisplay").innerHTML =
+                        "Failed to generate number. Please try again.";
+                }
+            });
+
+        function generateIndonesiaPhoneNumber() {
+            const prefix = "+62";
+            const areaCode = Math.floor(Math.random() * 900) + 100;
+            let restOfNumber = "";
+            for (let i = 0; i < 8; i++) {
+                restOfNumber += Math.floor(Math.random() * 10);
+            }
+            return `${prefix} ${areaCode}-${restOfNumber.slice(
+                0,
+                4
+            )}-${restOfNumber.slice(4)}`;
+        }
+    </script>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            Russia Phone Number Generator - Generate Authentic & Random Russian
+            Numbers
+        </title>
+        <meta
+            name="description"
+            content="Easily generate random Russian phone numbers for testing, verification, and other purposes. Authentic format with comprehensive coverage across Russia."
+        />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <header>
+            <nav>
+                <h1 class="logo">
+                    <a href="index.html" title="Phone Number Generator"
+                        >Phone Number Generator</a
+                    >
+                </h1>
+
+                <div class="language-list">
+                    <a
+                        class="curr"
+                        href="./russia-phone-number-generator.html"
+                        title="English"
+                        >English</a
+                    >
+                    <a
+                        href="./hi/russia-phone-number-generator.html"
+                        title="हिन्दी"
+                        >हिन्दी</a
+                    >
+                    <a
+                        href="./tl/russia-phone-number-generator.html"
+                        title="Filipino"
+                        >Filipino</a
+                    >
+                </div>
+
+                <div class="country-list">
+                    <a href="index.html" title="Phone Number Generator">Home</a>
+                    <a
+                        href="china-phone-number-generator.html"
+                        title="China Phone Number Generator"
+                        >China</a
+                    >
+                    <a
+                        href="india-phone-number-generator.html"
+                        title="India Phone Number Generator"
+                        >India</a
+                    >
+                    <a
+                        href="us-phone-number-generator.html"
+                        title="US Phone Number Generator"
+                        >US</a
+                    >
+                    <a
+                        href="indonesia-phone-number-generator.html"
+                        title="Indonesia Phone Number Generator"
+                        >Indonesia</a
+                    >
+                    <a
+                        href="brazil-phone-number-generator.html"
+                        title="Brazil Phone Number Generator"
+                        >Brazil</a
+                    >
+                    <a
+                        href="pakistan-phone-number-generator.html"
+                        title="Pakistan Phone Number Generator"
+                        >Pakistan</a
+                    >
+                    <a
+                        href="nigeria-phone-number-generator.html"
+                        title="Nigeria Phone Number Generator"
+                        >Nigeria</a
+                    >
+                    <a
+                        href="bangladesh-phone-number-generator.html"
+                        title="Bangladesh Phone Number Generator"
+                        >Bangladesh</a
+                    >
+                    <a
+                        href="russia-phone-number-generator.html"
+                        title="Russia Phone Number Generator"
+                        class="curr"
+                        >Russia</a
+                    >
+                    <a
+                        href="japan-phone-number-generator.html"
+                        title="Japan Phone Number Generator"
+                        >Japan</a
+                    >
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <h1>
+                    <a href="./russia-phone-number-generator.html"
+                        >Russia Phone Number Generator</a
+                    >
+                </h1>
+                <p>
+                    Generate valid Russia phone numbers with our tool. Perfect
+                    for various applications and tests.
+                </p>
+            </section>
+
+            <section>
+                <h2>Generate Russia Phone Number</h2>
+                <p style="margin-top: 5px">
+                    Note: These numbers are randomly generated and may not be
+                    valid for actual use.
+                </p>
+                <button id="generateButton">Generate Phone Number</button>
+
+                <div
+                    id="phoneNumberDisplay"
+                    class="number-display"
+                    style="margin-top: 10px"
+                ></div>
+                <div id="errorDisplay" class="error-display"></div>
+            </section>
+
+            <section>
+                <h2>Russia Phone Number Format</h2>
+                <p>
+                    The standard format for Russian phone numbers is +7 xxx xxx
+                    xx xx, where '+7' is the country code, followed by a 3-digit
+                    area code and then a 7-digit user number.
+                </p>
+            </section>
+
+            <section>
+                <h2>Major Mobile Operators in Russia</h2>
+                <ul>
+                    <li>Megafon: Starting with 91, 92, 93</li>
+                    <li>MTS: Starting with 90, 95, 96</li>
+                    <li>Beeline: Starting with 98, 99</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            Copyright 2023 &copy;
+            <a href="./" style="color: #333">Phone Number Generator</a>. All
+            rights reserved.
+        </footer>
+    </body>
+
+    <script>
+        document
+            .getElementById("generateButton")
+            .addEventListener("click", function () {
+                try {
+                    const phoneNumber = generateRussiaPhoneNumber();
+                    document.getElementById("phoneNumberDisplay").innerHTML +=
+                        phoneNumber + "<br />";
+                    document.getElementById("errorDisplay").innerHTML = "";
+                } catch (error) {
+                    document.getElementById("errorDisplay").innerHTML =
+                        "Failed to generate number. Please try again.";
+                }
+            });
+
+        function generateRussiaPhoneNumber() {
+            const prefix = "+7";
+            const areaCode = Math.floor(Math.random() * 900) + 100;
+            let restOfNumber = "";
+            for (let i = 0; i < 7; i++) {
+                restOfNumber += Math.floor(Math.random() * 10);
+            }
+            return `${prefix} ${areaCode} ${restOfNumber.slice(
+                0,
+                3
+            )} ${restOfNumber.slice(3, 5)} ${restOfNumber.slice(5)}`;
+        }
+    </script>
+</html>

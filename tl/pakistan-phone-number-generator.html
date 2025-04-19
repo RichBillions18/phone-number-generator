@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            Pakistan Phone Number Generator - Generate Authentic & Random
+            Pakistani Numbers
+        </title>
+        <meta
+            name="description"
+            content="Easily generate random Pakistani phone numbers for testing, verification, and other purposes. Authentic format with comprehensive coverage across Pakistan."
+        />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <header>
+            <nav>
+                <h1 class="logo">
+                    <a href="index.html" title="Phone Number Generator"
+                        >Phone Number Generator</a
+                    >
+                </h1>
+
+                <div class="language-list">
+                    <a
+                        class="curr"
+                        href="./pakistan-phone-number-generator.html"
+                        title="English"
+                        >English</a
+                    >
+                    <a
+                        href="./hi/pakistan-phone-number-generator.html"
+                        title="हिन्दी"
+                        >हिन्दी</a
+                    >
+                    <a
+                        href="./tl/pakistan-phone-number-generator.html"
+                        title="Filipino"
+                        >Filipino</a
+                    >
+                </div>
+
+                <div class="country-list">
+                    <a href="index.html" title="Phone Number Generator">Home</a>
+                    <a
+                        href="china-phone-number-generator.html"
+                        title="China Phone Number Generator"
+                        >China</a
+                    >
+                    <a
+                        href="india-phone-number-generator.html"
+                        title="India Phone Number Generator"
+                        >India</a
+                    >
+                    <a
+                        href="us-phone-number-generator.html"
+                        title="US Phone Number Generator"
+                        >US</a
+                    >
+                    <a
+                        href="indonesia-phone-number-generator.html"
+                        title="Indonesia Phone Number Generator"
+                        >Indonesia</a
+                    >
+                    <a
+                        href="brazil-phone-number-generator.html"
+                        title="Brazil Phone Number Generator"
+                        >Brazil</a
+                    >
+                    <a
+                        href="pakistan-phone-number-generator.html"
+                        title="Pakistan Phone Number Generator"
+                        class="curr"
+                        >Pakistan</a
+                    >
+                    <a
+                        href="nigeria-phone-number-generator.html"
+                        title="Nigeria Phone Number Generator"
+                        >Nigeria</a
+                    >
+                    <a
+                        href="bangladesh-phone-number-generator.html"
+                        title="Bangladesh Phone Number Generator"
+                        >Bangladesh</a
+                    >
+                    <a
+                        href="russia-phone-number-generator.html"
+                        title="Russia Phone Number Generator"
+                        >Russia</a
+                    >
+                    <a
+                        href="japan-phone-number-generator.html"
+                        title="Japan Phone Number Generator"
+                        >Japan</a
+                    >
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <h1>
+                    <a href="./pakistan-phone-number-generator.html"
+                        >Pakistan Phone Number Generator</a
+                    >
+                </h1>
+                <p>
+                    Generate valid Pakistan phone numbers with our tool. Perfect
+                    for various applications and tests.
+                </p>
+            </section>
+
+            <section>
+                <h2>Generate Pakistan Phone Number</h2>
+                <p style="margin-top: 5px">
+                    Note: These numbers are randomly generated and may not be
+                    valid for actual use.
+                </p>
+                <button id="generateButton">Generate Phone Number</button>
+
+                <div
+                    id="phoneNumberDisplay"
+                    class="number-display"
+                    style="margin-top: 10px"
+                ></div>
+                <div id="errorDisplay" class="error-display"></div>
+            </section>
+
+            <section>
+                <h2>Pakistan Phone Number Format</h2>
+                <p>
+                    The standard format for Pakistani phone numbers is +92
+                    xxx-xxxxxxx, where '+92' is the country code, followed by a
+                    3-digit area code and then a 7-digit user number.
+                </p>
+            </section>
+
+            <section>
+                <h2>Major Mobile Operators in Pakistan</h2>
+                <ul>
+                    <li>Jazz: Starting with 030, 031, 032, 033, 034</li>
+                    <li>Zong: Starting with 030, 031, 032, 033, 034</li>
+                    <li>Telenor: Starting with 030, 031, 032, 033, 034</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            Copyright 2023 &copy;
+            <a href="./" style="color: #333">Phone Number Generator</a>. All
+            rights reserved.
+        </footer>
+    </body>
+
+    <script>
+        document
+            .getElementById("generateButton")
+            .addEventListener("click", function () {
+                try {
+                    const phoneNumber = generatePakistanPhoneNumber();
+                    document.getElementById("phoneNumberDisplay").innerHTML +=
+                        phoneNumber + "<br />";
+                    document.getElementById("errorDisplay").innerHTML = "";
+                } catch (error) {
+                    document.getElementById("errorDisplay").innerHTML =
+                        "Failed to generate number. Please try again.";
+                }
+            });
+
+        function generatePakistanPhoneNumber() {
+            const prefix = "+92";
+            const areaCode = Math.floor(Math.random() * 900) + 100;
+            let restOfNumber = "";
+            for (let i = 0; i < 7; i++) {
+                restOfNumber += Math.floor(Math.random() * 10);
+            }
+            return `${prefix} ${areaCode}-${restOfNumber}`;
+        }
+    </script>
+</html>
